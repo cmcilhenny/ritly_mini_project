@@ -1,0 +1,10 @@
+<h1>Your Ritly!</h1>
+
+<p> ID: <%= @url.id %></p>
+<p> LINK: <%= @url.link %></p>
+<p> YOUR RANDOMLY RITLY URL: <%= @url.random_string %></p>
+
+<%= link_to "Show all", urls_path %>
+<%= link_to "Edit", edit_url_path %>
+
+<%= @url.inspect %>

@@ -1,0 +1,11 @@
+
+	<h1>Ritly!</h1> 
+	<h2>Create your Ritly</h2>
+
+	<%= form_for @url do |f| %>
+
+		<%= label_tag(:link, "Enter Your Link:") %>
+		<%= f.text_field :link, :class => "form-control" %></br>
+
+		<%= f.submit "Generate", :class => "btn btn-primary" %>
+	<% end %>

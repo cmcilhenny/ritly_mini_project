@@ -1,0 +1,14 @@
+<h1>Ritly Index Page!</h1>
+
+<% @urls.each do |url| %>
+	<li>
+		<%= link_to url.link, url_path(url.id) %>
+		<%= link_to "Edit", edit_url_path(url.id) %>
+		<%= link_to "Delete", url, method: :delete, data: {confirm: "R U Sure?"} %>
+	</li>
+
+<% end %>
+
+<%= link_to "New Ritly", new_url_path %>
+
+

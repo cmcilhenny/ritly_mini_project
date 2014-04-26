@@ -1,0 +1,10 @@
+<h1>Edit Url</h1>
+
+<%= form_for @url do |f| %>
+
+	<%= label_tag(:link, "Link") %>
+	<%= f.text_field :link %></br>
+
+	<%= f.submit "Update URL", :class => "btn btn-primary" %>
+
+<% end %>
