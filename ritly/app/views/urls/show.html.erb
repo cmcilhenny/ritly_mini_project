@@ -1,10 +1,17 @@
-<h1>Your Ritly!</h1>
+<h1 class="text-center">Your Ritly!</h1>
 
-<p> ID: <%= @url.id %></p>
-<p> LINK: <%= @url.link %></p>
-<p> YOUR RANDOMLY RITLY URL: <%= @url.random_string %></p>
+<p> ID: <strong><%= @url.id %></strong></p>
+<p> LINK: <strong><%= @url.link %></strong></p>
+<p> Your Randomly Ritly Url: <strong><%= @url.random_string %></strong></p>
+<p>CREATED: <strong><%= @url.created_at %></strong> </p>
+<p>LAST UPDATED: <strong><%= @url.updated_at %></strong> </p>
 
-<%= link_to "Show all", urls_path %>
-<%= link_to "Edit", edit_url_path %>
+<%= link_to "Go Link", "/go/#{@url.random_string}", :class => "btn btn-primary show" %>
+<%= link_to "Show All Ritly", urls_path, :class => "btn btn-primary show" %>
+<%= link_to "Edit", edit_url_path, :class => "btn btn-primary show" %></br>
 
-<%= @url.inspect %>
+
+<%= form_tag '/link/preview', method: :post, remote: true do %>
+    <%= submit_tag 'Preview', :class => "btn btn-primary show_special"%>
+<% end %>
+

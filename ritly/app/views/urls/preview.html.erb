@@ -1,0 +1,6 @@
+<h1>Preview to Link</h1>
+
+<h3><%= @object.title %></h3>
+<%= image_tag "#{@object.images.first.source_url}"%>
+
+<%= link_to "Go to Link" "/go/#{@url.random_string}" %>

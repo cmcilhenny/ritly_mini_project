@@ -4,8 +4,10 @@
 
 	<%= form_for @url do |f| %>
 
-		<%= label_tag(:link, "Enter Your Link:") %>
-		<%= f.text_field :link, :class => "form-control" %></br>
+		<%= label_tag(:link, "Enter Your Link: http://") %>
+		<%= f.text_field :link, :class => "form-horizontal" %></br>
 
-		<%= f.submit "Generate", :class => "btn btn-primary" %>
+		<%= f.submit "Generate", :class => "btn btn-primary new" %>
 	<% end %>
+
+<%= link_to "Show All", urls_path, :class => "btn btn-primary new" %>

@@ -1,21 +1,28 @@
 Ritly::Application.routes.draw do
+  # use_link_thumbnailer
+
   root 'urls#new'
+
+  get '/go/:random_string' => 'urls#go'
+
+  get 'go/:random_string/preview' => 'urls#preview'
 
   resources :urls
 
 end
 
 
-# Prefix Verb   URI Pattern              Controller#Action
-#     root GET    /                        urls#new
-#     urls GET    /urls(.:format)          urls#index
-#          POST   /urls(.:format)          urls#create
-#  new_url GET    /urls/new(.:format)      urls#new
-# edit_url GET    /urls/:id/edit(.:format) urls#edit
-#      url GET    /urls/:id(.:format)      urls#show
-#          PATCH  /urls/:id(.:format)      urls#update
-#          PUT    /urls/:id(.:format)      urls#update
-#          DELETE /urls/:id(.:format)      urls#destroy
+#    Prefix Verb   URI Pattern                  Controller#Action
+#     root GET    /                            urls#new
+#          GET    /go/:random_string(.:format) urls#go
+#     urls GET    /urls(.:format)              urls#index
+#          POST   /urls(.:format)              urls#create
+#  new_url GET    /urls/new(.:format)          urls#new
+# edit_url GET    /urls/:id/edit(.:format)     urls#edit
+#      url GET    /urls/:id(.:format)          urls#show
+#          PATCH  /urls/:id(.:format)          urls#update
+#          PUT    /urls/:id(.:format)          urls#update
+#          DELETE /urls/:id(.:format)          urls#destroy
   
 
 
