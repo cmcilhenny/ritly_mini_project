@@ -39,6 +39,8 @@ class UrlsController < ApplicationController
 
 	def go
 		@url = Url.where(random_string: params[:random_string]).first
+		@url.visit_count = @url.visit_count + 1
+		@url.save
 		redirect_to @url.link, alert: "We're moving somewhere!"
 	end
 

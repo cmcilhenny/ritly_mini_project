@@ -5,13 +5,11 @@
 <p> Your Randomly Ritly Url: <strong><%= @url.random_string %></strong></p>
 <p>CREATED: <strong><%= @url.created_at %></strong> </p>
 <p>LAST UPDATED: <strong><%= @url.updated_at %></strong> </p>
+<p>NUMBER OF VISITS: <strong><%= @url.visit_count %></strong> </p>
 
 <%= link_to "Go Link", "/go/#{@url.random_string}", :class => "btn btn-primary show" %>
 <%= link_to "Show All Ritly", urls_path, :class => "btn btn-primary show" %>
-<%= link_to "Edit", edit_url_path, :class => "btn btn-primary show" %></br>
+<%= link_to "Edit", edit_url_path, :class => "btn btn-primary show" %>
+<%= link_to "Preview", "/go/#{@url.random_string}/preview", :class => "btn btn-primary show" %>
 
-
-<%= form_tag '/link/preview', method: :post, remote: true do %>
-    <%= submit_tag 'Preview', :class => "btn btn-primary show_special"%>
-<% end %>
 

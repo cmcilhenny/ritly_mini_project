@@ -32,7 +32,7 @@ h2 {
 }
 
 .col-xs-8 {
-	background-color: white;
+	background-color: #F2C4BF;
 	border: 3px solid gray;
 	border-radius: 10px;
 	padding: 5% 3%;	 
@@ -65,12 +65,11 @@ ul {
 	margin-right: 30px;
 }
 
-.show_special {
-	float: left;
-	margin-top: 8px;
-}
-
 .edit {
 	border-radius: 3px;
 }
 
+.preview_image {
+	max-width: 200px;
+	max-height: 200px;
+}

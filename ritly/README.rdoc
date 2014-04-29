@@ -1,28 +1,26 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+TO WHOM IT MAY CONCERN:
 
-Things you may want to cover:
+For this mini-project, I focused on completing all aspects of the project, including the bonuses and the challenge. 
 
-* Ruby version
+Bonus Info:
 
-* System dependencies
+1. Displaying the number of times someone has used a redirect:
+	To do this, I changed my database via a migration. I added a new feature called "visit_count" to the database. "Visit_count" takes an integer and is defaulted to 0. I cooresponginly updated my "go" method in the Urls controlled so that evertime the method was called, the visit_count was updated by one (and saved to the database). 
+	TODO: work through this more to make sure it is working. It seems to increase the number everytime you attempt to go to the redirect (even if the redirect is not sucessful.) It would be worth understanding this more and/or making sure you get a 200 response before increasing visit_count? Not sure if possible.
 
-* Configuration
+2. Using DRY: not
 
-* Database creation
+3. Allowing user to create their own string: not acomplished! 
 
-* Database initialization
+4. Displaying preview page: 
+To do this, i did some quick reseach on gems, found one and installed it. The main difficulty with this is formating the preview image in the preview pane! 
 
-* How to run the test suite
+5. Regular Expressions and URL validation:
+I set up a feature in my new/root page that implied users should only input the url beginning after the http://. In the create method, with in the controller, I added a step that adds the "http://". The aim was to avoid the issue of inputs with no http. 
 
-* Services (job queues, cache servers, search engines, etc.)
+Challenge Info:
+I have more experience with general CSS than I do with Bootstrap, so focused on utilising bootstrap, implimenting images via rails, working with tables, and playing around with colors. 
 
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.

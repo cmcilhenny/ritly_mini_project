@@ -17,25 +17,37 @@ describe "Urls Management" do
 
 	end
 
-	# describe "show" do
+	describe "show" do
 
-	# end
+		it "returns 200 status" do
+			url = Url.create(link: "www.google.com", random_string: "shdIhdfhjd")
+			get '/urls/:id'
+			expect(response.status).to eq(200)
+		end
+
+	end
 
 	# describe "edit" do
 
 	# end
 
-	# describe "index" do
-
-	# end
+	describe "index" do
+		it "returns 200 status" do
+			get '/urls'
+			expect(response.status).to eq(200)
+		end
+	end
 
 	# describe "preview" do
 
 	# end
 
-	# describe "go/random_stirng" do
-
-	# end
+	describe "redirected localhost Ritly string" do
+		it "returns 200 status" do
+			get '/go/:random_string'
+			expect(response.status).to eq(200)
+		end
+	end
 
 
 end
